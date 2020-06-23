@@ -19,7 +19,7 @@ function CircularProgressWithLabel (props) {
         justifyContent='center'
       >
         <Typography variant='caption' component='div' color='textSecondary'>
-          {props.value !== 'S' ? props.value : 'S'}
+          {(props.value !== 'S' && !isNaN(props.value)) ? props.value/10 : 'S'}
         </Typography>
       </Box>
     </Box>
@@ -30,6 +30,6 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired
 }
 
-export default function CircularStatic () {
-  return <CircularProgressWithLabel value={'S'} />
+export default function CircularStatic ({val}) {
+  return <CircularProgressWithLabel value={val} />
 }

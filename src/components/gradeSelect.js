@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import Box from '@material-ui/core/Box'
+import CircularStatic from './circleProgress'
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -16,30 +18,47 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const possibleGrades = [10, 9, 8, 7, 6, 5, 4, 'S']
+let range = n => [...Array(n).keys()]
 
-export default function SimpleSelect ({ keyC }) {
+
+export default function SimpleSelect () {
   const classes = useStyles()
-  const [age, setAge] = React.useState('')
 
-  const handleChange = event => {
-    setAge(event.target.value)
+  const [currentGrades, setGrade] = React.useState([])
+
+  useEffect(() => {
+    console.log(currentGrades)
+  }, [currentGrades]  )
+
+  const updateGrade = (s, event) => {
+    console.log(event.target.value)
+    console.log(s)
+    let tmpArr = [...currentGrades]
+    tmpArr[s] = event.target.value
+    setGrade(tmpArr)
   }
 
   return (
-    <div>
-      <FormControl className={classes.formControl}>
-        <InputLabel id='simple-select-label'>Course {keyC + 1}</InputLabel>
-        <Select
-          labelId='simple-select-label'
-          id='simple-select'
-          value={age}
-          onChange={handleChange}
-        >
-          {possibleGrades.map(grade => (
-            <MenuItem value={grade}>{grade}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
+    <Box display='flex' flexWrap='wrap' justifyContent='center' m={1} p={1}>
+      {range(6).map(s => (
+        <div>
+          <div>
+            <FormControl className={classes.formControl}>
+              <InputLabel id='simple-select-label'>Course {s + 1}</InputLabel>
+              <Select
+                labelId='simple-select-label'
+                id='simple-select'
+                onChange={s,event => updateGrade(s,event)}
+              >
+                {possibleGrades.map(grade => (
+                  <MenuItem value={grade}>{grade}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
+          <CircularStatic val={(10*currentGrades[s])} />
+        </div>
+      ))}
+    </Box>
   )
 }

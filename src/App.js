@@ -2,30 +2,29 @@ import React from 'react'
 import './App.css'
 import InputField from './components/input'
 import SimpleSelect from './components/gradeSelect'
-import CircularStatic from './components/circleProgress'
 import { CircularProgress, Divider } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
+import CircularStatic from './components/circleProgress'
 
 function App () {
-  let range = n => [...Array(n).keys()]
-  const courseGrades = []
+  // let range = n => [...Array(n).keys()]
+  const [courseGrades, setGrades] = React.useState([])
 
-  const updateGrade = (event, props) => {
-    console.log(courseGrades, "Aryaman")
-    // courseGrades[props.keyC] = event.target.value
-  }
+  React.useEffect(() => {
+    console.log(courseGrades)
+  }, [courseGrades])
 
   return (
     <div className='App'>
       <InputField />
-      <Box display='flex' flexWrap='wrap' justifyContent='center' m={1} p={1}>
+      {/* <Box display='flex' flexWrap='wrap' justifyContent='center' m={1} p={1}>
         {range(6).map(s => (
           <div>
-            <SimpleSelect keyC={s} onChange={() => updateGrade} />
-            <CircularStatic />
+            <SimpleSelect keyC={s} />
           </div>
         ))}
-      </Box>
+      </Box> */}
+      <SimpleSelect/>
       <Divider />
 
       <div style={{ width: '100%' }}>
@@ -44,7 +43,7 @@ function App () {
             bgcolor='background.paper'
           >
             <Box p={1} alignItems='center' bgcolor='grey.300'>
-              <h1> SG  </h1>
+              <h1> SG </h1>
             </Box>
             <Box p={3} alignContent='center' bgcolor='grey.300'>
               <CircularProgress size={50} value={59} />
@@ -58,7 +57,7 @@ function App () {
             bgcolor='background.paper'
           >
             <Box p={1} alignItems='center' bgcolor='grey.300'>
-              <h1> CG  </h1>
+              <h1> CG </h1>
             </Box>
             <Box p={3} alignContent='center' bgcolor='grey.300'>
               <CircularProgress size={50} value={59} />
