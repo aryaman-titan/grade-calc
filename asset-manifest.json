@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/grade-calc/static/css/main.5f361e03.chunk.css",
-    "main.js": "/grade-calc/static/js/main.94ee4851.chunk.js",
-    "main.js.map": "/grade-calc/static/js/main.94ee4851.chunk.js.map",
+    "main.js": "/grade-calc/static/js/main.c23b5aea.chunk.js",
+    "main.js.map": "/grade-calc/static/js/main.c23b5aea.chunk.js.map",
     "runtime-main.js": "/grade-calc/static/js/runtime-main.8748e709.js",
     "runtime-main.js.map": "/grade-calc/static/js/runtime-main.8748e709.js.map",
-    "static/js/2.7d1cfaa7.chunk.js": "/grade-calc/static/js/2.7d1cfaa7.chunk.js",
-    "static/js/2.7d1cfaa7.chunk.js.map": "/grade-calc/static/js/2.7d1cfaa7.chunk.js.map",
+    "static/js/2.e3aafdca.chunk.js": "/grade-calc/static/js/2.e3aafdca.chunk.js",
+    "static/js/2.e3aafdca.chunk.js.map": "/grade-calc/static/js/2.e3aafdca.chunk.js.map",
     "index.html": "/grade-calc/index.html",
-    "precache-manifest.e3c12d7228c95b41b57786c96d3febe8.js": "/grade-calc/precache-manifest.e3c12d7228c95b41b57786c96d3febe8.js",
+    "precache-manifest.6cbca9419211b089ee160d2b82f30a21.js": "/grade-calc/precache-manifest.6cbca9419211b089ee160d2b82f30a21.js",
     "service-worker.js": "/grade-calc/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/grade-calc/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.7d1cfaa7.chunk.js.LICENSE.txt": "/grade-calc/static/js/2.7d1cfaa7.chunk.js.LICENSE.txt"
+    "static/js/2.e3aafdca.chunk.js.LICENSE.txt": "/grade-calc/static/js/2.e3aafdca.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8748e709.js",
-    "static/js/2.7d1cfaa7.chunk.js",
+    "static/js/2.e3aafdca.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.94ee4851.chunk.js"
+    "static/js/main.c23b5aea.chunk.js"
   ]
 }
