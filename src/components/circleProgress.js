@@ -19,7 +19,7 @@ function CircularProgressWithLabel (props) {
         justifyContent='center'
       >
         <Typography variant='caption' component='div' color='textSecondary'>
-          {(props.value !== 'S' && !isNaN(props.value)) ? props.value/10 : 'S'}
+          {(props.value !== 'S' && !isNaN(props.value)) ? (props.value/10).toFixed(2) : 'S'}
         </Typography>
       </Box>
     </Box>
