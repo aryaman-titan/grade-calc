@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6fcd2175682ced136ded264b5906cfaf",
+    "revision": "5c01015d0d198c8336aa6c866526861c",
     "url": "/grade-calc/index.html"
   },
   {
-    "revision": "a6bd79d79ecb277fa1c4",
+    "revision": "f7a37bfe99d7b5a5120e",
     "url": "/grade-calc/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/grade-calc/static/js/2.d6dd46ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a6bd79d79ecb277fa1c4",
-    "url": "/grade-calc/static/js/main.bd734039.chunk.js"
+    "revision": "f7a37bfe99d7b5a5120e",
+    "url": "/grade-calc/static/js/main.8ef63e0c.chunk.js"
   },
   {
     "revision": "81305c2d2e859471c0ed",
