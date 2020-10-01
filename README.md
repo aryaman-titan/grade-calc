@@ -1,3 +1,4 @@
+This web app is hosted at (https://aryaman-titan.github.io/grade-calc/)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
